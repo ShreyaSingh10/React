@@ -1,0 +1,47 @@
+
+.container{
+	text-align: center;
+}
+
+.contacts_contanier{
+	background: pink;
+	padding: 50px;
+	margin: 10px;
+
+}
+.addContacts{
+	text-align: center;
+}
+
+input{
+	border: 2px solid orange;
+	border-radius: 2px;
+	margin: 10px;
+	cursor: pointer;
+	padding: 5px;
+}
+
+button{
+	background: orange;
+	border-radius: 10px;
+	
+}
+
+.picture{
+	width: 80px;
+	height:80px;
+	border-radius: 100px;
+	border: 2px solid orange;
+	text-align: center;
+	background: url('../dummy.jpeg')
+
+}
+
+.image-upload{
+	height: 200px;
+}
+
+.image-contact{
+	height: 150px;
+	border-radius: 100px;
+}
