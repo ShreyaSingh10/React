@@ -14,7 +14,7 @@ class AddContact extends React.Component{
     	phoneError: false,
     	nameError: false,
     }
-    
+
 	handleChangeName= e =>{
 		const name= e.target.value;
         this.setState({
@@ -34,7 +34,7 @@ class AddContact extends React.Component{
 	handleSubmit = e =>{
 		e.preventDefault();
 		const { name, number, image } = this.state;
-		
+
 		const phoneError = !phoneValidator(number)
 		const nameError =  !(name.length>0)
 
@@ -73,12 +73,12 @@ class AddContact extends React.Component{
     fileChangedHandler = (event) => {
         const file = event.target.files[0];
         event.target.value =null;
-        // coverting to b64 
+        // coverting to b64
         const reader = new FileReader();
   		reader.onloadend = () => {
     		this.setState({image:reader.result });
   		}
-  		reader.readAsDataURL(file);   
+  		reader.readAsDataURL(file);
 	}
 
 	render(){
@@ -86,14 +86,14 @@ class AddContact extends React.Component{
 		return(
 			<div className="addContacts">
 				<form onSubmit={this.handleSubmit}>
-					<div>
-						{(image)?<img className="picture" src={image} /> :<input className="picture" type="file" onChange={this.fileChangedHandler}  /> }
-					</div>
-					<div><input onChange={this.handleChangeName} value ={name} type="text" placeholder="enter your name"></input></div>
-					{nameError && <p>Enter a valid name</p> }
-					<div><input onChange={this.handleChangeNumber} value={number} type="tel" placeholder="enter your number"></input></div>
-					{phoneError && <p>Enter a valid number</p>}
-					<div><button type="submit" >Submit</button></div>
+        <div>
+						{(image)?<img className="picture" src={image} align="middle"/> :<input className="file-upload" type="file" onChange={this.fileChangedHandler}  /> }
+        </div>
+				<div><input onChange={this.handleChangeName} value ={name} type="text" placeholder="Enter name"></input></div>
+					{nameError && <p><b>Enter a valid name</b></p> }
+				<div><input onChange={this.handleChangeNumber} value={number} type="tel" placeholder="Enter number"></input></div>
+					{phoneError && <p><b>Enter a valid number</b></p>}
+				<div><button type="submit" >Submit</button></div>
 				</form>
 			</div>
 		)

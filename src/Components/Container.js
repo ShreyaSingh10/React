@@ -21,7 +21,7 @@ class Container extends React.Component{
 
 	deletingContact = (number) => {
 		this.setState((prevstate)=> {
-			const newContacts= prevstate.contacts.filter( (c) => c.number !== number ) 
+			const newContacts= prevstate.contacts.filter( (c) => c.number !== number )
 			localStorage.setItem("contacts", JSON.stringify(newContacts));
 			return {
 				contacts: newContacts
@@ -41,18 +41,23 @@ class Container extends React.Component{
 	render(){
 		return(
 			<div className="container">
-				<h1>Contacts App</h1>
+        <h1><font face = "Comic sans MS" size ="7">Contacts App</font></h1>
 				<AddContact addingContact={this.addingContact}/>
-				{this.state.contacts.map((info)=>
-					<DisplayContacts 
-						key={info.number}
-						name={info.name} 
-						number={info.number}
-						image={info.image}
-						deletingContact={this.deletingContact}
-					/>
-				)}
+        <h2><font face = "Comic sans MS" size =" 5">Contacts List</font></h2>
+        <div className="ancestor">
+          <div className="parent_contanier">
+    				{this.state.contacts.map((info)=>
+    					<DisplayContacts
+    						key={info.number}
+    						name={info.name}
+    						number={info.number}
+    						image={info.image}
+    						deletingContact={this.deletingContact}
+    					/>
+    				)}
+          </div>
 			</div>
+    </div>
 		)
 	}
 }

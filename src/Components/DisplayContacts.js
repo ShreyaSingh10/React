@@ -8,12 +8,14 @@ class DisplayContacts extends React.Component{
 		const { image, name,number } = this.props;
 
 		return(
+
 			<div className="contacts_contanier">
 			    <img src={image} className="picture"/>
-				<div>Name: {name}</div>
-				<div>Number: {number}</div>
-				<button onClick={() => deletingContact(number)} >Delete</button>
+				<div><font face = "Comic sans MS" size =" 2">Name: {name}</font></div>
+				<div><font face = "Comic sans MS" size =" 2">Number: {number}</font></div>
+				<button className="delete" onClick={() => deletingContact(number)} >Delete</button>
 			</div>
+
 		)
 	}
 }

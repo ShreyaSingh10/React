@@ -1,42 +1,91 @@
-
-.container{
-	text-align: center;
+html, body {
+	height: 100%;
+	background: orange;
 }
-
+.container{
+height: 100%;
+background: orange;
+}
+.ancestor{
+	float:left;
+	width:100%;
+	overflow-y: auto;
+	height: 450px;
+}
+.parent_contanier{
+	display: flex;
+	flex-wrap: wrap;
+}
 .contacts_contanier{
-	background: pink;
+	background: white;
 	padding: 50px;
 	margin: 10px;
-
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	border-radius: 10px;
+	overflow-y: auto;
+	box-shadow: 4px 4px yellow;
 }
-.addContacts{
+h1,h2 {
 	text-align: center;
 }
+.addContacts{
+	background: url("https://www.specialtyansweringservice.net/wp-content/uploads/answering-services/telephone-answering-services.jpg");
+	padding: 20px;
+	text-align: center;
 
+}
+form{
+	background: rgba(0,0,0,0.4);
+	padding: 10px;
+}
 input{
-	border: 2px solid orange;
-	border-radius: 2px;
-	margin: 10px;
+	border: 4px solid red;
+	border-radius: 5px;
+	margin: 5px;
 	cursor: pointer;
 	padding: 5px;
+	width: 20%;
+	box-shadow: 2px 2px orange;
+	background: white;
 }
 
 button{
-	background: orange;
+	background: red;
 	border-radius: 10px;
-	
+	box-shadow: 2px 2px orange;
+	width: 40%;
+	padding: 5px;
+	margin: 10px;
+	color: white;
+
 }
 
+.delete{
+	background: red;
+	border-radius: 10px;
+	box-shadow: 2px 2px orange;
+	width: 100px;
+	padding: 5px;
+	margin: 10px;
+	color: white;
+}
 .picture{
 	width: 80px;
 	height:80px;
 	border-radius: 100px;
-	border: 2px solid orange;
-	text-align: center;
-	background: url('../dummy.jpeg')
-
+	border: 4px solid red;
+  box-shadow: 2px 2px orange;
+}
+.information{
+	display: inline;
 }
 
+p{
+	font-size: 13px;
+	color: white;
+}
 .image-upload{
 	height: 200px;
 }
@@ -44,4 +93,9 @@ button{
 .image-contact{
 	height: 150px;
 	border-radius: 100px;
+}
+.display{
+	width: 100%;
+	height: 100%;
+	background: pink;
 }
